@@ -173,12 +173,23 @@ public class MusicOrganizer
         }
     }
     
+    // the code from review in-class
+    public void randomPlay()
+    {
+        if(tracks.size() > 0) {
+            Random rand= new Random();
+            int index = rand.nextInt(tracks.size());
+            playTrack(index);
+        }
+    }
     
-    
+    /*
+    // the one I wrote
     private void playrandomtrack(int rand)
     {
         rand = Math.random();
         int randomNumber = Math.random(Nextln(track.size()));
         playTrack(randomNumber); 
     }
+    */
 }
