@@ -193,9 +193,10 @@ public class MusicOrganizer
         playTrack(randomNumber); 
     }
     */
-   
+   //second question
    public void randomPlayall()
    {
+       Random rand = new Random();
        ArrayList<Track>leftToPlay = new ArrayList<>(tracks);
        while (leftToPlay.size()>0){
            int index = rand.nextInt(leftToPlay.size());
