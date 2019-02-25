@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
+
 /**
  * A class to hold details of audio tracks.
  * Individual tracks may be played.
@@ -192,4 +193,15 @@ public class MusicOrganizer
         playTrack(randomNumber); 
     }
     */
+   
+   public void randomPlayall()
+   {
+       ArrayList<Track>leftToPlay = new ArrayList<>(tracks);
+       while (leftToPlay.size()>0){
+           int index = rand.nextInt(leftToPlay.size());
+           Track t= leftToPlay.remove(index);
+           player.playSample(t.getFilename());
+        }
+    }
+       
 }
